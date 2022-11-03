@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.b-border{
+    border-bottom: 4px solid rgb(16 185 129 ) ;
+}

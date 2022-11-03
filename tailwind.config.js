@@ -11,6 +11,14 @@ module.exports = {
         center: true, 
         margin : 'auto'
       },
+      fontFamily: {
+        'sans': ['Merriweather', 'Sans-serif']
+      },
+      spacing: {
+        '112': '28rem',
+        '128': '32rem',
+      },
+      
     },
   },
   plugins: [],
