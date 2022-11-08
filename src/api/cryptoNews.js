@@ -11,9 +11,7 @@ const getNews = async () => {
     };
     const res = await axios.request(options)
     .then(res => res.data )//newsList.value = res.data )
-    .catch(function (error) {
-        console.error(error);
-    }); 
+    .catch( error => error.message ); 
     return res
 }
 

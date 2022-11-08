@@ -52,8 +52,6 @@ onErrorCaptured(()=>{
     errMsg.value = 'Sometg went wrong'
 })
 
-
-
-// console.log(getNews() )
+ 
 </script>
  
