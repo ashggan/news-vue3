@@ -7,3 +7,8 @@
 .b-border{
     border-bottom: 4px solid rgb(16 185 129 ) ;
 }
+
+*{
+    outline: 0px;
+    /* overflow-x: hidden; */
+}

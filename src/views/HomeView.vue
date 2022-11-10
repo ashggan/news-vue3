@@ -26,14 +26,14 @@
         </template>
       </Suspense> 
        <div class="text-black txt-lg" v-if="errMsg">{{errMsg}}</div>
-      <Suspense v-else>
+      <!-- <Suspense v-else>
         <template #default>
           <cryptoNews/>  
         </template>
         <template #fallback> 
           <LoadingComponent/>
         </template>
-      </Suspense>
+      </Suspense> -->
     </div> 
   </div>
 </template>
@@ -41,17 +41,14 @@
 <script setup >
 import { ref, onErrorCaptured } from 'vue';
 import cryptoNews from '../components/cryptoNews.vue';
-import LoadingComponent from '../components/LoadingComponent.vue'
+import LoadingComponent from '../components/Loading/LoadingComponent.vue'
 import QuizComp from '../components/quizComp.vue';
 
 
 const category = ['Science','Society & Culture', 'Film & TV', 'General Knowledge']
 const errMsg = ref(null)
 
-onErrorCaptured(()=>{
-    errMsg.value = 'Sometg went wrong'
-})
+onErrorCaptured(()=> errMsg.value = 'Sometg went wrong')
 
- 
 </script>
  

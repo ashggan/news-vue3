@@ -20,7 +20,21 @@ const router = createRouter({
     {
       path: "/products",
       name: "products",
-      component: () => import('../views/Products.vue')
+      component: () => import('../views/Products.vue'),
+      // children:
+    },
+    {
+      path : '/cart',
+      name:'cart',
+      component: () => import('../views/shopping/shoppingCart.vue')
+    },
+    {
+      path: "/Log",
+      name:"log",
+      component:() => import('../views/LogPage.vue'),
+      meta: {
+        hideNavbar: true,
+       }
     },
   ],
 });

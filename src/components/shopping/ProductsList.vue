@@ -1,6 +1,5 @@
-<template>
-    <!-- <h1>cart items</h1> -->
-    <div 
+<template> 
+    <div  
         v-for="pro in products"
         class="group relative hover:shadow-2xl shadow-lg group-hover:cursor-pointer pb-4 border-b-2 border-b-indigo-500 transition-shadow duration-500 ease-in-out"> 
         <!-- product image  -->
@@ -43,7 +42,7 @@
                     class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Buy
                 </button>
                 <button 
-                    @click="addItemToCart(pro.id)"
+                    @click="addItemToCart(pro)"
                     class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                     <i class="fa fa-shopping-cart"></i>
                 </button>
@@ -55,19 +54,17 @@
                 </button>
             </div>
         </div>
-</div>
+    </div>
 </template>
 
-<script setup>
-import { onMounted, ref } from 'vue'; 
+<script setup> 
 import StarRating from 'vue-star-rating'
- 
 import { productStore } from '@/stores/products' 
  
 const store = productStore() 
 await store.fetchProducts()
-const products = store.products 
-// console.log(store.cart)
-const addItemToCart = id => store.addItemToCart(id)
-
+const products = store.products  
+const addItemToCart = pro => store.addItemToCart(pro)
 </script>
+
+
